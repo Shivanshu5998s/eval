@@ -26,7 +26,6 @@ function readFormData() {
     formData["Population"] = document.getElementById("Population").value;
 
     return formData;
-
     // console.log(formData);
 }
 
