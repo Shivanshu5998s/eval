@@ -1,7 +1,7 @@
 const express = require('express');
 const products = require("./products.json");
+const app = express();
 
-const app = express()
 app.use(express.json());
 
 app.get('/products', (req, res) => {
@@ -15,13 +15,13 @@ app.post('/products/create', (req, res) => {
 
 app.get('/products/:productid', (req, res) => {
     const newProducts = products.filter((product) => product.id == req.params.id);
-    console.log(newProducts)
+    console.log(newProducts);
     res.send(newProducts);
 })
 
 app.delete('/products/:productid', (req, res) => {
     const newProducts = products.filter((product) => product.id == req.params.id);
-    console.log(newProducts)
+    console.log(newProducts);
     res.send(newProducts);
 })
 
